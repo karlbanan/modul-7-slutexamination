@@ -1,0 +1,74 @@
+.page {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+}
+
+.menu-item-main {
+    display: flex;     
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.product-info {
+    display: flex;     
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.product-name {
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 120%;
+    align-self: flex-start;
+    text-align: left;
+    background-color: chartreuse;
+    width: 100%;
+}
+
+.product-description {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 130%;
+    align-self: flex-start;
+}
+
+.price {
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 23px;
+    line-height: 120%;
+    align-self: flex-start;
+}
+
+.add-icon {
+    width: 17px;
+    height: 17px;
+ 
+    background-color: #2F2926;
+    border-radius: 50%;
+    display: inline-block;
+    padding: 8px; 
+}
+
+.line {
+    background-color: coral ;
+    align-self: flex-start;
+    flex-grow: 1;
+}

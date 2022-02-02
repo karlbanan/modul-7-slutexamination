@@ -1,0 +1,55 @@
+.page {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+}
+
+.header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.menu-main {       
+    width: 375px;
+    height: 665px;
+    background-color: #F3E4E1;
+}
+
+.heading {
+    position: relative;
+    top: 120px;
+    left: 50%;    
+    transform: translate(-50%, 0);
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 120%;    
+}
+
+.menu {
+    list-style-type:none;
+    padding: 0px;
+    position: relative;
+    top: 120px;
+    left: 0px;
+    margin: 25px;
+    width: auto;
+}

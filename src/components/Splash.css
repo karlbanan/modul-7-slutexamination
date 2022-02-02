@@ -1,0 +1,33 @@
+.page {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+}
+
+.left {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.middle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.splash-main {       
+    width: 375px;
+    height: 665px;
+    background-color: #38846d; 
+}
