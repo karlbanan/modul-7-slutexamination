@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={ <Splash/> } exact />
         <Route path="/menu/" element={ <Menu /> } />
         <Route path="/cart/" element={ <Cart /> } />
-        <Route path="/order/" element={ <Order /> } />
+        <Route path="/Order/" element={ <Order /> } />
         <Route path="*" element={ <Error /> } />
       </Routes>      
     </div>

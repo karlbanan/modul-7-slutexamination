@@ -28,7 +28,7 @@
 
 .menu-main {       
     width: 375px;
-    height: 665px;
+    height: 840px;
     background-color: #F3E4E1;
 }
 
@@ -52,4 +52,10 @@
     left: 0px;
     margin: 25px;
     width: auto;
+}
+
+.cart {
+    position: absolute;    
+    top: 20px;
+    right: 20px;
 }

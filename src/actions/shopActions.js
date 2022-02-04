@@ -1,6 +1,27 @@
-export const addToCart = (part) => {
+export const initProducts = (products) => {
     return {
-        type: 'ADD_TICKET',
-        payload: ticket
+        type: 'INIT_PRODUCTS',
+        payload: products
+    }
+}
+
+export const addToCart = (productId) => {
+    return {
+        type: 'ADD_TO_CART',
+        payload: productId
+    }
+}
+
+export const subFromCart = (productId) => {
+    return {
+        type: 'SUB_FROM_CART',
+        payload: productId
+    }
+}
+
+export const submitOrder = () => {
+    return {
+        type: 'SUBMIT_ORDER',
+        payload: {}
     }
 }
