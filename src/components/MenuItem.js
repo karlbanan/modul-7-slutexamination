@@ -13,6 +13,8 @@ function MenuItem({product})
         dispatch(addToCart(product.id));
     }
 
+    const drawLine = product.title.length < 20 ? "\u00A0" : "";
+
     return (
         <li className="menu-item-main">
             <a onClick={()=>{onAddToCartClicked()}}>
@@ -20,8 +22,8 @@ function MenuItem({product})
             </a>
             <div className="product-info">
                 <div className="product-name-group">
-                    <div className="product-name">{product.title}</div>
-                    <div className="line">&nbsp;</div>
+                    <div className="menu-item-product-name">{product.title}</div>
+                    <div className="menu-item-line">{drawLine}</div>                    
                 </div>                    
                 <div className="product-description">{product.desc}</div>
             </div>            

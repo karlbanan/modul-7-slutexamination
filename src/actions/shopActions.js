@@ -19,9 +19,9 @@ export const subFromCart = (productId) => {
     }
 }
 
-export const submitOrder = () => {
+export const clearCart = () => {
     return {
-        type: 'SUBMIT_ORDER',
+        type: 'CLEAR_CART',
         payload: {}
     }
 }

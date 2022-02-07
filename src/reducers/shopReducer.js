@@ -3,23 +3,13 @@ import { shoppingCartItem } from "../classes/shoppingCartItem"
 const initialState = {
     products: [],
     cart: [],
-    orders: []
 }
 
 const shopReducer = (state = initialState, action) => {
     switch(action.type) {
         case 'ADD_TO_CART':
 
-            // Check that product exists from product store
             var productId = action.payload;
-            /*
-            var product = state.products.find(x => x.id === productId);
-            if (product == undefined) {
-                // Do nothing
-                console.log("Invalid product id");
-                return {...state}
-            }
-            */
 
             // Check if product exists in cart
             var productInCartIndex = state.cart.findIndex(x => x.productId === productId);            
@@ -48,13 +38,52 @@ const shopReducer = (state = initialState, action) => {
             }
 
 
+            case 'SUB_FROM_CART':
+
+                var productId = action.payload;
+    
+                var productInCartIndex = state.cart.findIndex(x => x.productId === productId);            
+                if (productInCartIndex >= 0) {    
+                    var qty = state.cart[productInCartIndex].quantity - 1;                    
+                    var cartArray = [...state.cart];
+                    cartArray.splice(productInCartIndex, 1);
+                    var item = new shoppingCartItem(productId, qty)
+
+                    if (qty > 0) {
+                        return {
+                            ...state,
+                            cart: [
+                                ...cartArray,
+                                item
+                            ]
+                        }
+                    }
+                    else {
+                        return {
+                            ...state,
+                            cart: [...cartArray]
+                        }
+                    }
+                }
+                else {
+                    return state;
+                }
+    
+
         case 'INIT_PRODUCTS':
             return {
                 ...state,
                 products: action.payload
             }
+
+        case 'CLEAR_CART':
+            return {
+                ...state,
+                cart: []
+            }            
+
         default:
-        return state;
+            return state;
     }
 }
 

@@ -24,15 +24,12 @@ function Menu()
         async function getProductsFromApi() {
           const response = await fetch('http://localhost:5000/api/beans');
           const data = await response.json();
-          console.log('API reponse: ', data.menu);
     
           dispatch(initProducts(data.menu));
         }     
 
         getProductsFromApi();
     }, []);
-
-    console.log("PRODUCTS:" + products[3]);
 
     function onShowCartClicked()
     {

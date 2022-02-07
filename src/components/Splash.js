@@ -2,6 +2,7 @@ import introGraphicsLeft from "../assets/graphics/intro-graphic-left.svg"
 import introGraphicsRight from "../assets/graphics/intro-graphic-right.svg"
 import airbeanLanding from "../assets/graphics/airbean-landing.svg"
 import { useNavigate } from 'react-router-dom';
+import { useEffect } from "react";
 
 import './Splash.css'
 
@@ -9,9 +10,11 @@ function Splash()
 {
     const navigate = useNavigate();
 
-    setTimeout(() => { 
-        navigate('/Menu',{});
-    }, 3000)
+    useEffect(() => {
+        setTimeout(() => { 
+            navigate('/Menu',{});
+        }, 3000)    
+    },[])
 
     return (
         <div className="page">

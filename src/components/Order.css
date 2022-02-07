@@ -1,0 +1,87 @@
+.order-page {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: white;
+}
+
+.order-main {       
+    width: 375px;
+    height: 670px;
+    background-color: #E5674E;
+}
+
+.restart-button {    
+    margin: auto;
+    z-index: 4;
+    padding-top : 10px;
+    color: #2F2926;
+    background-color: white;
+    border-radius: 50px;
+    width: 248px;
+    height: 40px;    
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;    
+}
+
+.order-text {
+    padding: 40px;
+
+    font-family: PT Serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 120%;
+    /* or 43px */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.order-ordernumber {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 120%;
+    align-items: center;
+    text-align: center;
+
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.order-eta {
+    padding-bottom: 75px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 120%;
+    align-items: center;
+    text-align: center;   
+    color: white;     
+}
+
+.order-wait-for-it {
+    margin: auto;
+    padding-top: 320px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 120%;
+    align-items: center;
+    text-align: center;   
+    color: white;     
+}
