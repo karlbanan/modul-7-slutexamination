@@ -41,27 +41,19 @@ function Order()
         clearCart();
     },[])
 
-
-    let orderInfo
-    orderInfo = cart.length > 0 ? (<div className="order-wait-for-it">...</div>) :
-    (
-        <>                
-            <div className="order-ordernumber">Ordernummer <b>#{orderResponse.orderNr}</b>  </div>
-            <img src={graphicsDrone}></img>
-            <div className="order-text">Din beställning är på väg</div>
-            <div className="order-eta"><b>{orderResponse.eta}</b> minuter</div>
-            <a onClick={()=>{onRestartClicked()}}>
-                <div className="restart-button">Ok, Cool!</div>            
-            </a>  
-        </>
-    )
-
+    let orderNumber = cart.length > 0 ? (<></>) : (<div className="order-ordernumber">Ordernummer <b>#{orderResponse.orderNr}</b>  </div>)
+    let orderEta = cart.length > 0 ? (<></>) : (<div className="order-eta"><b>{orderResponse.eta}</b> minuter</div>)
+    let orderButton = cart.length > 0 ? (<></>) : (<a onClick={()=>{onRestartClicked()}}><div className="restart-button">Ok, Cool!</div></a>)
 
     return (
         <>
         <section className="order-page">
             <div className="order-main">            
-                {orderInfo}                
+                {orderNumber}        
+                <img className="order-drone" src={graphicsDrone}></img>
+                <div className="order-text">Din beställning är på väg</div>
+                {orderEta}
+                {orderButton}                
             </div>
         </section>
         </>

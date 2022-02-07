@@ -12,7 +12,7 @@ function Cart()
 {
     const navigate = useNavigate();
     const products = useSelector((state) => { return state.products});
-    const cart = useSelector((state) => { return state.cart});
+    const itemsIncart = useSelector((state) => { return state.cart.length});
 
     function onHideCartClicked()
     {
@@ -55,7 +55,9 @@ function Cart()
         return sum;
     }); 
 
-
+    let orderButton = itemsIncart > 0 
+        ? (<a onClick={()=>{onSubmitOrderClicked()}}><div className="cart-order-button">Take my money!</div></a>) 
+        : (<></>)
 
     return (        
         <div className="page">
@@ -82,9 +84,7 @@ function Cart()
                     </div>
                     <div className="cart-small-text">inkl moms + drönarleverans</div>
                     
-                    <a onClick={()=>{onSubmitOrderClicked()}}>
-                        <div className="cart-order-button">Take my money!</div>
-                    </a>                
+                    {orderButton}
                 </section>
 
                 <img className="footer" src={graphicsFooter} alt="Footer" />

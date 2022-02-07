@@ -38,7 +38,7 @@
     font-size: 23px;
     line-height: 120%;
     align-self: flex-start;
-    text-align: left;
+    text-align: left;    
 }
 
 .cart-item-price {
@@ -98,5 +98,4 @@
     background-position: bottom;
     background-size: 4px 1px;
     background-repeat: repeat-x;
-    margin-bottom: 6px;
 }

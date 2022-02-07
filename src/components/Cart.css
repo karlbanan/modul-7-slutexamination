@@ -122,12 +122,16 @@
 }
 
 .cart-line {
+    position: relative;
+    top: 1px;
     flex-grow: 1;
     background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
     background-position: bottom;
     background-size: 4px 1px;
     background-repeat: repeat-x;
     margin-bottom: 6px;
+    margin-left: 1px;
+    margin-right: 5px;
 }
 
 
